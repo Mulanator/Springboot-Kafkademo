@@ -1,0 +1,15 @@
+spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers: 192.168.178.51:9092 #wird für instanzen ohne config-klassen verwendet
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+app:
+  bootstrapAddress: 192.168.178.51:9092
+  topic: test-topic
+  group-id1: testings1
+  group-id2: testings2
