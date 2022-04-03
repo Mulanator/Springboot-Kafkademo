@@ -9,7 +9,7 @@ public class MessageListener {
 
     public CountDownLatch latch = new CountDownLatch(3);
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MessageListener.class);
 
     @KafkaListener(topics = "${app.topic}", containerFactory = "group1KafkaListenerContainerFactory")
     public void listenGroup1(String message) {

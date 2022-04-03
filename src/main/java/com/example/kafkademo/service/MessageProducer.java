@@ -17,7 +17,7 @@ public  class MessageProducer {
     @Value(value = "${app.topic}")
     private String topicName;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MessageProducer.class);
 
     public void sendMessage(String message) {
 
